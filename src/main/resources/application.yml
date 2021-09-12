@@ -1,0 +1,20 @@
+spring:
+  config:
+    import:
+      - classpath:mariadb.yml
+  datasource:
+    hikari:
+      minimum-idle: 15
+      maximum-pool-size: 45
+      idle-timeout: 120000
+      max-lifetime: 840000
+  jpa:
+    open-in-view: false
+    properties:
+      hibernate:
+        implicit_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+        physical_naming_strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        order_inserts: true
+        order_updates: true
+    hibernate:
+      ddl-auto: update

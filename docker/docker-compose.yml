@@ -1,0 +1,12 @@
+version: "3"
+services:
+  mysql:
+   container_name: mariadb
+   image: mariadb:10.5
+   ports:
+     - "3306:3306"
+   environment:
+     MARIADB_ROOT_PASSWORD: springnative
+     MARIADB_USER: spring
+     MARIADB_PASSWORD: secret
+     MARIADB_DATABASE: springnative
